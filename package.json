@@ -1,0 +1,53 @@
+{
+  "name": "@prakharverma20082005/indian-stock-exchange-mcp",
+  "version": "2.0.0",
+  "main": "build/index.js",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "nse",
+    "bse",
+    "india",
+    "stocks",
+    "finance",
+    "claude"
+  ],
+  "author": "",
+  "license": "MIT",
+  "description": "MCP server for Indian equities (NSE/BSE): quotes, fundamentals, analyst targets, IPOs, mutual funds and commodities.",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "dotenv": "^16.4.7",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.14",
+    "typescript": "^5.8.2"
+  },
+  "type": "module",
+  "bin": {
+    "indian-stock-exchange-mcp": "build/index.js"
+  },
+  "scripts": {
+    "build": "tsc && chmod 755 build/index.js",
+    "start": "node build/index.js",
+    "start:http": "node build/index.js --http 3000",
+    "test": "npm run build && node --test \"build/**/*.test.js\"",
+    "smoke": "node scripts/smoke.mjs"
+  },
+  "files": [
+    "build",
+    "!build/**/*.test.js",
+    "README.md",
+    "LICENSE",
+    ".env.example"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "mcpName": "io.github.prakharv-ops/indian-stock-exchange-mcp",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prakharv-ops/Indian-Stock-Exchange-MCP.git"
+  }
+}

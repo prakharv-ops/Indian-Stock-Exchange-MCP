@@ -1,0 +1,29 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.prakharv-ops/indian-stock-exchange-mcp",
+  "title": "Indian Stock Exchange",
+  "description": "Indian stocks (NSE/BSE): quotes, fundamentals, analyst targets, IPOs, mutual funds, commodities.",
+  "version": "2.0.0",
+  "repository": {
+    "url": "https://github.com/prakharv-ops/Indian-Stock-Exchange-MCP",
+    "source": "github"
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@prakharverma20082005/indian-stock-exchange-mcp",
+      "version": "2.0.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "ISE_API_KEY",
+          "description": "API key from https://indianapi.in/indian-stock-market",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
