@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { buildSnapshot } from "./tools/stocks.js";
-import { flattenMetrics, num } from "./util.js";
+import { buildSnapshot } from "../tools/stocks.js";
+import { flattenMetrics, num } from "../util.js";
 
 test("num parses API-style numbers", () => {
   assert.equal(num("1,234.5"), 1234.5);

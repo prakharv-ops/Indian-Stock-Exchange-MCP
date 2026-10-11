@@ -32,12 +32,12 @@
     "build": "tsc && chmod 755 build/index.js",
     "start": "node build/index.js",
     "start:http": "node build/index.js --http 3000",
-    "test": "npm run build && node --test \"build/**/*.test.js\"",
+    "test": "npm run build && node --test build/tests/client.test.js build/tests/stocks.test.js",
     "smoke": "node scripts/smoke.mjs"
   },
   "files": [
     "build",
-    "!build/**/*.test.js",
+    "!build/tests",
     "README.md",
     "LICENSE",
     ".env.example"
